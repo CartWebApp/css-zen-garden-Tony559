@@ -2,6 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
 * {
     color: white;
+    
+}
+
+:root {
+    margin: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    --box-shadow: 
+    5px 4px 0 rgba(96, 52, 67, 1), /* First shadow */
+    10px 10px 15px rgba(0, 0, 0, 0.5); /* Second shadow */
+    --color1: #B11D56; 
+    --color2: #603443;
+}
+
+abbr { 
+    text-decoration: none;
 }
 body {
     background-image: url(sakuras-shadowed.png);
@@ -13,12 +31,12 @@ body {
 header { 
     margin-top: 5vw;
     margin-left: 5vw;
-    background-color: #B11D56;
+    background-color: var(--color1);
     width: 79.234vw;
     height: 10.868vw;
     box-shadow: 
-        0 4px 10px rgba(96, 52, 67, 0.5), /* First shadow */
-        0 8px 20px rgba(0, 0, 0, 0.3); /* Second shadow */
+        5px 4px 0 rgba(96, 52, 67, 1), /* First shadow */
+        10px 10px 15px rgba(0, 0, 0, 0.5); /* Second shadow */
     display: flex;
     flex-direction: column;
     font-family: "Island Moments", cursive;
@@ -36,13 +54,27 @@ header {
     margin-bottom: 0;
     text-transform: uppercase;
 }
-#zen-intro [role="banner"] h2  {
+
+h2:nth-child(2) {
     margin-left: 2.5vw;
     font-weight: 300;
     font-size: 40px;
     font-style: normal;
     margin-top: 0px;
     margin-bottom: 0;
-
 }
 
+#zen-summary { 
+    background-color: var(--color1);
+    width: 57.917vw;
+    height: 8.056vw;
+    margin-left: 5vw;
+    margin-top: 14vh;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+#zen-summary.p { 
+
+}
