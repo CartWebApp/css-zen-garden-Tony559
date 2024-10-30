@@ -1,4 +1,5 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Jim+Nightshade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
 * {
     color: white;
@@ -28,6 +29,7 @@ body {
     top: 0;
     display: flex;
 }
+
 header { 
     margin-top: 5vw;
     margin-left: 5vw;
@@ -48,7 +50,7 @@ header {
 #zen-intro [role="banner"] h1 {
     margin-left: 1vw;
     font-weight: 300;
-    font-size: 96px;
+    font-size: 140px;
     font-style: normal;
     margin-top: 5px;
     margin-bottom: 0;
@@ -64,7 +66,7 @@ h2:nth-child(2) {
     margin-bottom: 0;
 }
 
-#zen-summary { 
+.intro .summary { 
     background-color: var(--color1);
     width: 57.917vw;
     height: 8.056vw;
@@ -73,8 +75,44 @@ h2:nth-child(2) {
     box-shadow: var(--box-shadow);
     display: flex;
     flex-direction: column;
+    font-family: "Jim Nightshade", cursive;
+    text-shadow: 4px 4px 0 black; 
+    display: flex;
 }
 
-#zen-summary.p { 
+#zen-summary p { 
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    flex-wrap: wrap;
+}
+#zen-summary p:first-child { 
+    font-size: 30px;
+    margin-bottom: 0;
+    width: 70%;
+    display:block;
+}
+#zen-summary p:nth-child(2) { 
+    font-size: 20px;
+    margin-top: 0;
+}
+
+a:visited { 
+    color: rgb(209, 209, 209);
+}
+
+a[href="/examples/index"], a[href="/examples/style.css"] {
+    color: grey; 
+}
+
+
+/* To cycle through the thing, make it scrollable and when clicked it will go to the next section using id's and :before's  */
+
+
+
+
+
+
+.main.supporting {
 
 }
