@@ -15,16 +15,20 @@
     --box-shadow: 
     5px 4px 0 rgba(96, 52, 67, 1), /* First shadow */
     10px 10px 15px rgba(0, 0, 0, 0.5); /* Second shadow */
+    --textshadow1: 4px 4px 0 black;
     --color1: #B11D56; 
     --color2: #603443;
+    --font1: "Island Moments", cursive;
+    --font2: "Jim Nightshade", cursive;
 }
 
 abbr { 
     text-decoration: none;
 }
 body {
-    background-image: url(sakuras-shadowed.png);
+    background-image: url(sakura-shadowed-long.png);   
     margin-top: 0;
+    height: 200%;
     left: 0; 
     top: 0;
     display: flex;
@@ -39,6 +43,7 @@ header {
     box-shadow: 
         5px 4px 0 rgba(96, 52, 67, 1), /* First shadow */
         10px 10px 15px rgba(0, 0, 0, 0.5); /* Second shadow */
+    border-radius: 20px 0px 20px 0px;
     display: flex;
     flex-direction: column;
     font-family: "Island Moments", cursive;
@@ -71,8 +76,9 @@ h2:nth-child(2) {
     width: 57.917vw;
     height: 8.056vw;
     margin-left: 5vw;
-    margin-top: 14vh;
+    margin-top: 9.236vw;
     box-shadow: var(--box-shadow);
+    border-radius: 20px 0px 20px 0px;
     display: flex;
     flex-direction: column;
     font-family: "Jim Nightshade", cursive;
@@ -95,6 +101,7 @@ h2:nth-child(2) {
 #zen-summary p:nth-child(2) { 
     font-size: 20px;
     margin-top: 0;
+    
 }
 
 a:visited { 
@@ -109,10 +116,51 @@ a[href="/examples/index"], a[href="/examples/style.css"] {
 /* To cycle through the thing, make it scrollable and when clicked it will go to the next section using id's and :before's  */
 
 
-
-
+#zen-preamble { 
+    background-color: var(--color1);
+    box-shadow: var(--box-shadow);
+    width: 57.917vw;
+    height: 26.806vw;
+    margin-left: 5vw;
+    margin-top: 4.027vw;
+}
 
 
 .main.supporting {
+    width: 57.917vw;
+    height: fit-content;
+    background-color: rgb(101, 99, 99);
+}
+.design-selection { 
+    display: flex;
+    width: 20.139vw;
+    height: fit-content;
+    flex-direction: column;
 
+}
+
+.select { 
+    font-family: var(--font1);
+    text-shadow: var(--textshadow1);
+    margin-left: 1vw;
+    font-size: 40px;
+    margin-bottom: 0;
+    margin-top: 1vw;
+}
+
+a:hover {
+    color: pink;
+}
+
+@media screen and (min-width: 550px) {
+    aside.sidebar {
+
+        position: absolute;
+        right: 6.806vw;
+        top: 18.819vw;
+        width: 20.139vw;
+        height: 54.167vw;
+        background-color: var(--color1);
+        border-radius: 20px 0px 20px 0px;
+    }
 }
