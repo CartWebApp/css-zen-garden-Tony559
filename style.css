@@ -43,7 +43,7 @@ header {
     box-shadow: 
         5px 4px 0 rgba(96, 52, 67, 1), /* First shadow */
         10px 10px 15px rgba(0, 0, 0, 0.5); /* Second shadow */
-    border-radius: 20px 0px 20px 0px;
+
     display: flex;
     flex-direction: column;
     font-family: "Island Moments", cursive;
@@ -78,7 +78,6 @@ h2:nth-child(2) {
     margin-left: 5vw;
     margin-top: 9.236vw;
     box-shadow: var(--box-shadow);
-    border-radius: 20px 0px 20px 0px;
     display: flex;
     flex-direction: column;
     font-family: "Jim Nightshade", cursive;
@@ -91,6 +90,7 @@ h2:nth-child(2) {
     flex-direction: row;
     width: 60%;
     flex-wrap: wrap;
+    margin-left: 1vw;
 }
 #zen-summary p:first-child { 
     font-size: 30px;
@@ -105,11 +105,15 @@ h2:nth-child(2) {
 }
 
 a:visited { 
-    color: rgb(209, 209, 209);
+    color: pink;
 }
 
 a[href="/examples/index"], a[href="/examples/style.css"] {
-    color: grey; 
+    color: rgb(255, 255, 255); 
+    margin-left: .3vw;
+}
+a[href="/examples/index"] {
+    margin-right: .3vw;
 }
 
 
@@ -122,15 +126,24 @@ a[href="/examples/index"], a[href="/examples/style.css"] {
     width: 57.917vw;
     height: 26.806vw;
     margin-left: 5vw;
-    margin-top: 4.027vw;
+    margin-top: 4.027vw;    
+}
+#zen-preamble h3 { 
+    padding-left: 1vw;
+    padding-top: 1vw;
+}
+#zen-preamble p { 
+    width: 90%;
+    margin-top: 1vw;
+    padding-left: 2vw;
+    padding-top: 1vw;
+    font-family: var(--font2);
+    font-size: 25px;
+    text-shadow: var(--textshadow1);
 }
 
 
-.main.supporting {
-    width: 57.917vw;
-    height: fit-content;
-    background-color: rgb(101, 99, 99);
-}
+
 .design-selection { 
     display: flex;
     width: 20.139vw;
@@ -161,6 +174,121 @@ a:hover {
         width: 20.139vw;
         height: 54.167vw;
         background-color: var(--color1);
-        border-radius: 20px 0px 20px 0px;
+        text-shadow: var(--textshadow1);
+        box-shadow: var(--box-shadow);
     }
+}
+.sidebar a {
+    text-shadow: 0px 2px 2px black;
+}
+.sidebar ul { 
+    font-family: var(--font2);
+    font-size: 20px;
+    list-style-type: none;
+}
+.sidebar li { 
+    margin-bottom: 1vw;
+
+}
+.archives { 
+    font-family: var(--font1);
+    text-shadow: var(--textshadow1);
+    margin-left: 1vw;
+    font-size: 40px;
+    margin-bottom: 0;
+    margin-top: 1vw;
+}
+.resources { 
+    font-family: var(--font1);
+    text-shadow: var(--textshadow1);
+    margin-left: 1vw;
+    font-size: 40px;
+    margin-bottom: 0;
+    margin-top: 1vw;
+}
+
+h3 {
+    font-family: var(--font1);
+    font-size: 40px;
+    margin: 0;
+    text-shadow: var(--textshadow1);
+}
+
+
+.main.supporting { 
+    width: 57.917vw;
+    height: 31.25vw;
+    overflow-y: scroll;
+    background-color: var(--color1);
+    margin-left: 5vw;
+    margin-top: 4vw;
+}
+
+.explanation p {
+    width: 90%;
+    margin-top: 1vw;
+    padding-left: 2vw;
+    padding-top: 1vw;
+    font-family: var(--font2);
+    font-size: 25px;
+    text-shadow: var(--textshadow1);
+}
+
+.participation p {
+    width: 90%;
+    margin-top: 1vw;
+    padding-left: 2vw;
+    padding-top: 1vw;
+    font-family: var(--font2);
+    font-size: 25px;
+    text-shadow: var(--textshadow1);
+}
+
+.benefits p {
+    width: 90%;
+    margin-top: 1vw;
+    padding-left: 2vw;
+    padding-top: 1vw;
+    font-family: var(--font2);
+    font-size: 25px;
+    text-shadow: var(--textshadow1);
+}
+
+.requirements p {
+    width: 90%;
+    margin-top: 1vw;
+    padding-left: 2vw;
+    padding-top: 1vw;
+    font-family: var(--font2);
+    font-size: 25px;
+    text-shadow: var(--textshadow1);
+}
+
+
+
+@media screen and (min-width: 550px) {
+    footer {
+
+        position: absolute;
+        right: 6.806vw;
+        top: 80vw;
+        width: 20.139vw;
+        height: 5vw;
+        background-color: var(--color1);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: var(--box-shadow);
+        font-family: var(--font2);
+        font-size: 30px;
+        text-shadow: 0px 2px 2px black;
+    }
+}
+
+.main.supporting h3 { 
+    margin-left: 1vw;
+}
+
+.explanation h3 { 
+    margin-top: 1vw;
 }
