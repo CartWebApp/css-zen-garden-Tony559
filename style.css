@@ -165,19 +165,17 @@ a:hover {
     color: pink;
 }
 
-@media screen and (min-width: 550px) {
-    aside.sidebar {
-
-        position: absolute;
-        right: 6.806vw;
-        top: 18.819vw;
-        width: 20.139vw;
-        height: 54.167vw;
-        background-color: var(--color1);
-        text-shadow: var(--textshadow1);
-        box-shadow: var(--box-shadow);
-    }
+aside.sidebar {
+    position: absolute;
+    right: 6.806vw;
+    top: 18.819vw;
+    width: 20.139vw;
+    height: 54.167vw;
+    background-color: var(--color1);
+    text-shadow: var(--textshadow1);
+    box-shadow: var(--box-shadow);
 }
+
 .sidebar a {
     text-shadow: 0px 2px 2px black;
 }
