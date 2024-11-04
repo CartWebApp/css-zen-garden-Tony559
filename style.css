@@ -21,11 +21,25 @@
     --font1: "Island Moments", cursive;
     --font2: "Jim Nightshade", cursive;
 }
+.designer-name::before {
+    content: "- ";
+}
+.designer-name::after {
+    content: " -";
+}
 
-abbr { 
+p abbr { 
     text-decoration: none;
 }
-body {
+
+a abbr {
+    text-decoration: none;
+}
+
+h2 abbr {
+    text-decoration: none;
+}
+html,body {
     background-image: url(sakura-shadowed-long.png);   
     margin-top: 0;
     height: 200%;
@@ -91,12 +105,14 @@ h2:nth-child(2) {
     width: 60%;
     flex-wrap: wrap;
     margin-left: 1vw;
+    
 }
 #zen-summary p:first-child { 
     font-size: 30px;
     margin-bottom: 0;
     width: 70%;
     display:block;
+    margin-top: .5vw;
 }
 #zen-summary p:nth-child(2) { 
     font-size: 20px;
@@ -109,7 +125,6 @@ a:visited {
 }
 
 a[href="/examples/index"], a[href="/examples/style.css"] {
-    color: rgb(255, 255, 255); 
     margin-left: .3vw;
 }
 a[href="/examples/index"] {
@@ -176,9 +191,6 @@ aside.sidebar {
     box-shadow: var(--box-shadow);
 }
 
-.sidebar a {
-    text-shadow: 0px 2px 2px black;
-}
 .sidebar ul { 
     font-family: var(--font2);
     font-size: 20px;
@@ -212,7 +224,6 @@ h3 {
     text-shadow: var(--textshadow1);
 }
 
-
 .main.supporting { 
     width: 57.917vw;
     height: 31.25vw;
@@ -220,6 +231,7 @@ h3 {
     background-color: var(--color1);
     margin-left: 5vw;
     margin-top: 4vw;
+    box-shadow: var(--box-shadow);
 }
 
 .explanation p {
@@ -262,31 +274,154 @@ h3 {
     text-shadow: var(--textshadow1);
 }
 
-
-
-@media screen and (min-width: 550px) {
-    footer {
-
-        position: absolute;
-        right: 6.806vw;
-        top: 80vw;
-        width: 20.139vw;
-        height: 5vw;
-        background-color: var(--color1);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        box-shadow: var(--box-shadow);
-        font-family: var(--font2);
-        font-size: 30px;
-        text-shadow: 0px 2px 2px black;
-    }
+footer {
+    position: absolute;
+    right: 6.806vw;
+    top: 80vw;
+    width: 20.139vw;
+    height: 5vw;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    font-family: var(--font2);
+    font-size: 30px;
+    text-shadow: 0px 2px 2px black;
 }
 
-.main.supporting h3 { 
+
+.main.supporting h3:only-of-type { 
     margin-left: 1vw;
 }
 
 .explanation h3 { 
     margin-top: 1vw;
+}
+
+::selection { 
+    color: black;
+    text-shadow: none;
+}
+
+p + h3 { 
+    font-size: 25px;
+}
+
+p::first-letter { 
+    font-size: 40px;
+}
+
+h3:first-of-type {
+    font-family: var(--font1);
+}
+
+p::first-line { 
+    font-style: italic;
+}
+
+h3:first-child { 
+    font-size: 40px;
+}
+
+div > p { 
+    color: white;
+}
+
+.sidebar a:focus {
+    outline: 2px solid rgb(238, 238, 238); /* Added focus style */
+}
+
+div:empty {
+    display:none;
+}
+
+[lang|="en"] {
+    background-color: rgb(255, 0, 0);
+}
+
+p ~ h3 {
+    color: var(--color2);
+}
+
+a[href] {
+    text-decoration: underline;
+}
+
+a[href*="design"] {
+    color: rgb(241, 221, 155);
+}
+
+a[href^="/examples/"] {
+    font-weight: bold;
+}
+
+a[href$=".css"] {
+    font-style: italic;
+}
+
+a:active {
+    color: rgb(255, 0, 0);
+}
+
+section p:last-child {
+    color: rgb(255, 255, 255);
+}
+
+.main.supporting h3:last-of-type {
+    margin-bottom: .4vw;
+}
+
+a:link {
+    color: rgb(255, 255, 255);
+}
+
+p:not(:first-child) {
+    margin-top: 1em;
+}
+
+.design-selection > h3:only-child {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.main.supporting p:nth-of-type(1) {
+    font-weight: 400;
+}
+
+p:not(.no-style) {
+    line-height: 1.5;
+}
+
+.summary p:last-child {
+    margin-bottom: .5vw;
+}
+
+.summary p:last-child {
+    margin-bottom: .5vw;
+}
+
+p:nth-last-child(3) {
+    font-weight: bold;
+}
+
+section div:nth-last-of-type(1) {
+    border: 2px solid var(--color2);
+}
+
+p:not(:first-child) {
+    margin-top: .2vw;
+}
+
+a[href$=".css"] {
+    font-style: italic;
+}
+
+a[href^="/examples/"] {
+    font-weight: bold;
+}
+
+a[class~="designer-name"] {
+    color: rgb(255, 254, 250); /* Change color for links with the designer-name class */
+    font-weight: bold; /* Make text bold */
 }
